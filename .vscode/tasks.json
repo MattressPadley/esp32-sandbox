@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Upload and Monitor Template",
+        "type": "shell",
+        "command": "platformio",
+        "args": [
+            "run",
+            "-t",
+            "upload",
+            "-d",
+            "template",
+            "&&",
+            "platformio",
+            "device",
+            "monitor",
+            "-d",
+            "template"
+        ],
+        "presentation": {
+            "reveal": "always"
+        },
+        "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "Upload and Monitor ENC28J60",
+        "type": "shell",
+        "command": "platformio",
+        "args": [
+            "run",
+            "-t",
+            "upload",
+            "-d",
+            "enc28j60",
+            "&&",
+            "platformio",
+            "device",
+            "monitor",
+            "-d",
+            "enc28j60"
+        ],
+        "problemMatcher": [],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+]
+}
