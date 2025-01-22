@@ -42,6 +42,46 @@
             "enc28j60"
         ],
         "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "Upload and Monitor CD74HC4067",
+        "type": "shell",
+        "command": "platformio",
+        "args": [
+            "run",
+            "-t",
+            "upload",
+            "-d",
+            "cd74hc4067",
+            "&&",
+            "platformio",
+            "device",
+            "monitor",
+            "-d",
+            "cd74hc4067"
+        ],
+        "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "Upload and Monitor CAP1188",
+        "type": "shell",
+        "command": "platformio",
+        "args": [
+            "run",
+            "-t",
+            "upload",
+            "-d",
+            "cap1188",
+            "&&",
+            "platformio",
+            "device",
+            "monitor",
+            "-d",
+            "cap1188"
+        ],
+        "problemMatcher": [],
         "group": {
             "kind": "build",
             "isDefault": true
